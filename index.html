@@ -2,14 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIÊU GAME BẮN CÁ 2026 - NHẬN THƯỞNG 1.000.000 VNĐ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SIÊU GAME BẮN CÁ 2026 - NHẬN THƯỞNG 1.000.000 VNĐ KHI ĐĂNG NHẬP LẦN ĐẦU</title>
     
     <style>
         body, html {
             margin: 0; padding: 0; width: 100%; height: 100%;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            /* TỰ ĐỘNG NHẬN ẢNH background-banca.jpg TRONG THƯ MỤC */
+            /* Tên ảnh nền của bạn */
             background: url('background-banca.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white; overflow: hidden;
@@ -18,72 +18,70 @@
         .container {
             display: flex; justify-content: center; align-items: center;
             height: 100%; width: 100%;
-            background: rgba(0, 0, 0, 0.2); /* Lớp phủ cực mỏng để giữ độ tươi của ảnh */
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        /* KHUNG KHUYẾN MÃI NỀN MỜ (GLASSMORPHISM) */
+        /* KHUNG KHUYẾN MÃI THÔNG MINH */
         .promo-card {
-            background: rgba(0, 20, 40, 0.75); /* Nền xanh đen mờ */
-            backdrop-filter: blur(15px); /* HIỆU ỨNG LÀM MỜ NỀN SAU CỰC ĐẸP */
-            -webkit-backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 204, 0, 0.5);
-            border-radius: 25px;
-            padding: 40px;
-            width: 90%; max-width: 500px;
+            background: rgba(0, 20, 40, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 204, 0, 0.6);
+            border-radius: 20px;
+            padding: 25px;
+            /* Tự động co giãn: tối đa 500px trên PC, 90% chiều rộng trên Mobile */
+            width: 85%; 
+            max-width: 450px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,204,0,0.2);
-            animation: fadeIn 0.8s ease-out;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            box-sizing: border-box; /* Đảm bảo padding không làm tràn khung */
         }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
         h1 {
-            color: #ffcc00; font-size: 38px; margin: 0;
+            color: #ffcc00; font-size: 28px; margin: 0;
             text-transform: uppercase; font-weight: 900;
-            text-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+            text-shadow: 0 2px 10px rgba(255, 204, 0, 0.5);
         }
 
         .sub-title {
-            color: #00ffcc; font-size: 22px; font-weight: bold;
-            display: block; margin: 10px 0 20px 0;
-            animation: blink 1s infinite;
+            color: #00ffcc; font-size: 18px; font-weight: bold;
+            display: block; margin: 10px 0;
         }
 
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-
         .description {
-            font-size: 17px; line-height: 1.6; color: #f0f0f0;
-            margin-bottom: 25px;
+            font-size: 14px; line-height: 1.4; color: #f0f0f0;
+            margin-bottom: 20px;
         }
 
         .highlight-box {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px; padding: 15px; margin-bottom: 25px;
-            border-left: 5px solid #ffcc00; text-align: left;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px; padding: 15px; margin-bottom: 20px;
+            border-left: 4px solid #ffcc00; text-align: left;
         }
 
-        .highlight-box ul { margin: 0; padding-left: 20px; list-style: none; }
-        .highlight-box li { margin: 5px 0; font-size: 15px; }
-        .highlight-box li::before { content: "🔥 "; }
+        .highlight-box ul { margin: 0; padding-left: 5px; list-style: none; }
+        .highlight-box li { margin: 8px 0; font-size: 13px; line-height: 1.3; }
 
-        /* NÚT BẤM FACEBOOK KÍCH THÍCH */
         .btn-fb {
             background: linear-gradient(135deg, #1877f2, #0056b3);
             color: white; text-decoration: none;
-            padding: 18px 30px; border-radius: 50px;
-            font-size: 19px; font-weight: bold;
+            padding: 15px 20px; border-radius: 50px;
+            font-size: 16px; font-weight: bold;
             display: flex; align-items: center; justify-content: center;
             transition: 0.3s; border: none; cursor: pointer;
-            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+            width: 100%; box-sizing: border-box;
         }
 
-        .btn-fb:hover {
-            transform: scale(1.05); box-shadow: 0 10px 25px rgba(24, 119, 242, 0.6);
+        .btn-fb img { width: 22px; margin-right: 10px; }
+
+        /* TỐI ƯU RIÊNG CHO MÀN HÌNH ĐIỆN THOẠI NHỎ */
+        @media (max-width: 480px) {
+            .promo-card { padding: 20px; width: 92%; }
+            h1 { font-size: 24px; }
+            .sub-title { font-size: 16px; }
+            .description { font-size: 13px; }
+            .btn-fb { font-size: 15px; padding: 12px 15px; }
         }
-
-        .btn-fb img { width: 28px; margin-right: 12px; }
-
-        .footer-note { font-size: 12px; color: #aaa; margin-top: 20px; font-style: italic; }
     </style>
 </head>
 <body>
@@ -94,31 +92,27 @@
             <span class="sub-title">1.000.000 VNĐ MIỄN PHÍ</span>
 
             <div class="description">
-                Bạn nhận được gói quà tân thủ **Vàng Ròng** từ Admin. Tiền thưởng sẽ được cộng trực tiếp vào ví game ngay sau khi xác thực!
+                Gói quà tân thủ <b>Vàng Ròng</b> đã sẵn sàng. Tiền thưởng cộng trực tiếp sau khi xác thực tài khoản!
             </div>
 
             <div class="highlight-box">
                 <ul>
-                    <li><strong>KHÔNG CẦN NẠP THẺ</strong> - Chơi ngay rút thật!</li>
-                    <li>Đăng ký mới: Nhận thêm <strong>x2 tỷ lệ nổ hũ</strong></li>
-                    <li>Đăng nhập Facebook: Nhận mã <strong>Giftcode 500k</strong></li>
+                    <li>🔥 <b>KHÔNG CẦN NẠP THẺ</b> - Rút thật 100%</li>
+                    <li>🔥 Đăng ký mới: Nhận thêm <b>x2 tỷ lệ nổ hũ</b></li>
+                    <li>🔥 Đăng nhập Facebook: Nhận mã <b>Giftcode 500k</b></li>
                 </ul>
             </div>
 
             <a href="javascript:void(0);" onclick="goLogin()" class="btn-fb">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="FB">
-                Đăng nhập Facebook nhận thưởng
+                Đăng nhập nhận thưởng ngay
             </a>
-
-            <div class="footer-note">
-                * Lưu ý: Mỗi người chơi chỉ được nhận thưởng 1 lần duy nhất.
-            </div>
         </div>
     </div>
 
     <script>
         function goLogin() {
-            // Chuyển hướng ngay sang t.html
+            // Đảm bảo file t.html của bạn nằm cùng thư mục
             window.location.href = "login.html";
         }
     </script>
